@@ -1,0 +1,34 @@
+.items-list-module {
+
+	.item {
+		position: relative;
+		overflow: hidden;
+		display: inline-block;
+		width: 180px;
+		height: 180px;
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		margin-right: 4px;
+		margin-bottom: 10px;
+	}
+
+	.item:hover {
+		border-color: #0088cc;
+		box-shadow: 0 0 10px #dddddd;
+	}
+
+	.image-box {
+		background-color: white;
+		margin: 5px;
+	}
+
+	.label {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-radius: 0;
+	}
+
+	.item:hover .label {background-color: #0088cc}
+}

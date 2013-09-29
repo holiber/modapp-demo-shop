@@ -1,0 +1,14 @@
+@import 'items/item/item';
+
+.catalog-module {
+
+	.nav {
+		float: left;
+		width: 210px;
+		margin-right: 10px;
+		border-right: 1px solid #ddd;
+		padding-right: 10px;
+	}
+
+	.catalog-content {margin-left: 220px;}
+}

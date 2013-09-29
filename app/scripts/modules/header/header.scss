@@ -1,0 +1,21 @@
+.header-module {
+
+	.navbar,.page-header {
+		margin-bottom: 0;
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	h1 {
+		margin: 0;
+		padding-left: 20px;
+		color: #0088cc;
+		font-style: italic
+	}
+
+	.user {
+		position: absolute;
+		right: 10px;
+		top: 20px;
+	}
+}

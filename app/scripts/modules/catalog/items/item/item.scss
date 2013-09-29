@@ -1,0 +1,21 @@
+.item-module {
+
+	.content {height: 190px; position: relative}
+	.page-place {padding: 10px}
+
+	.info {
+		position: absolute;
+		top: 0;
+		left: 180px;
+		min-height: 190px;
+	}
+
+	.price {
+		color: #006ccc;
+		font-size: 3.2em;
+		margin-top: 50px;
+		text-shadow: 0 0 20px gray;
+	}
+
+	.nav-pills {margin-bottom: 0}
+}

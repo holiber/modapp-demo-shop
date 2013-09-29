@@ -1,0 +1,10 @@
+<div class="items-list-module">
+	{{#each data.rows}}
+		<a href="#!catalog/items/{{name}}" class="item" rel="{{id}}">
+			<div class="image-box">
+				<img src="/data/images/{{name}}.jpeg" alt="..."/>
+			</div>
+			<div class="label">{{name}}</div>
+		</a>
+	{{/each}}
+</div>
