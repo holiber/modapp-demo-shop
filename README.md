@@ -1,5 +1,5 @@
 #Overview
-	Demo application based on modapp framework
+Demo application based on modapp framework
 ## Installation
 	$ npm install
 	$ bower install
