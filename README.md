@@ -1,5 +1,6 @@
 #Overview
-Demo application based on modapp framework
+Demo application based on [modapp](http://github.com/holiber/modapp) framework
+[http://github.com/holiber/modapp](http://github.com/holiber/modapp)
 ## Installation
 	$ npm install
 	$ bower install
@@ -7,4 +8,3 @@ Demo application based on modapp framework
 	$ grunt server
 ## build
 	$ grunt build
-[http://github.com/holiber/modapp](http://github.com/holiber/modapp)
