@@ -13,4 +13,4 @@ It will start local web server for debugging application on port 9000
 	$ grunt build
 	
 It will compile and compress your scripts, styles, templates, add version tags to builded files.
-Builded application will be in the "dist" folder
+Builded application will be placed in the "dist" folder
