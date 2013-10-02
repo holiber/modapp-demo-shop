@@ -44,6 +44,7 @@ define([
 		},
 
 		_attachEvents: function () {
+			//TODO: get rid of the "bind" method
 			this.on('click', '.btn.buy', this.buy.bind(this));
 			this.on('click', '.btn.to-cart', this.toCart.bind(this));
 		},
@@ -59,7 +60,7 @@ define([
 			this.add(new Description());
 			this.add(new Inside());
 			this.loadState = 'done';
-			this.setPage();
+			this.setPage(this.page);
 			this.render();
 		},
 
