@@ -1,5 +1,5 @@
 {
-  "name": "jmodapp",
+  "name": "modapp",
   "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
@@ -16,6 +16,7 @@
     "grunt-contrib-htmlmin": "~0.1.3",
     "grunt-contrib-imagemin": "~0.1.3",
     "grunt-contrib-livereload": "~0.1.2",
+    "grunt-contrib-requirejs": "~0.4.0",
     "grunt-bower-requirejs": "~0.4.1",
     "grunt-rev": "~0.1.0",
     "grunt-usemin": "~0.1.10",
