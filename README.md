@@ -4,6 +4,7 @@ Demo application based on [modapp](http://github.com/holiber/modapp) framework
 ![modapp](https://raw.github.com/holiber/modapp/master/logo.png)
 ## Installation
 	$ git clone https://github.com/holiber/modapp-demo-shop.git
+	$ cd modapp-demo-shop
 	$ npm install
 	$ bower install
 ## Run
