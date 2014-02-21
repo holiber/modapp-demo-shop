@@ -1,0 +1,49 @@
+<div class="item-module modal hide fade">
+	<div class="modal-header">
+		<a href="#!catalog/items" type="button" class="close" >&times;</a>
+		<h3>
+			{{#eq loadState "none"}}
+				Loading items...
+			{{else}}
+				{{#if item.name}}{{item.name}}{{else}}Error{{/if}}
+			{{/eq}}
+		</h3>
+	</div>
+	<div class="modal-body">
+
+		{{#eq loadState 'none'}}
+			<div class="progress progress-striped active">
+				<div class="bar" style="width: 100%;"></div>
+			</div>
+		{{/eq}}
+
+
+
+		{{#eq loadState 'done'}}
+			{{#if item}}
+				<div class="content">
+					<img src="/data/images/{{item.name}}.jpeg" alt="..."/>
+					<div class="info">
+						<ul class="nav nav-pills">
+							<li class="{{m.description}}"><a href="#!catalog/items/{{item.name}}/description">Description</a></li>
+							<li class="{{m.inside}}"><a href="#!catalog/items/{{item.name}}/inside">inside</a></li>
+						</ul>
+						<div class="{{pagePlace}} page-place"></div>
+					</div>
+				</div>
+			{{else}}
+				Item not found
+			{{/if}}
+		{{/eq}}
+
+	</div>
+
+	{{#eq loadState 'done'}}
+		<div class="modal-footer">
+			{{#unless notFound}}
+				<a href="#" class="btn to-cart">To cart</a>
+				<a href="#" class="btn btn-primary buy">Buy it !</a>
+			{{/unless}}
+		</div>
+	{{/eq}}
+</div>

@@ -1,0 +1,28 @@
+<div class="chat-module">
+	<!--
+	<div class="members">
+		<div class="members-head">Members<i class="icon-plus"></i></div>
+	</div>
+	-->
+	{{#unless chats.rows.length}}
+		You have no chats yet
+	{{else}}
+
+		<ul class="nav nav-tabs chat-tabs">
+			{{#each chats.rows}}
+				<li class="{{#if focused}}active{{/if}}" rel="{{_id}}"><a href="#" data-toggle="tab">{{name}}</a></li>
+			{{/each}}
+		</ul>
+
+		<div class="chat-area">
+			<div class="track">
+				{{{helpers.renderedMessages}}}
+			</div>
+		</div>
+
+		<div class="input-bar input-append">
+			<input type="text" class="span2 input-message" placeholder="your message"/>
+			<button class="btn btn-send" type="button">Send</button>
+		</div>
+	{{/unless}}
+</div>
