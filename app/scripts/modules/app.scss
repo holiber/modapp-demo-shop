@@ -1,5 +1,6 @@
 @import 'dialogs/dialogs';
-@import 'catalog/catalog';
+@import 'conversation/conversation';
+@import 'home/home';
 @import 'header/header';
 @import 'footer/footer';
 
@@ -21,6 +22,8 @@ body {
 	background: url('/images/app-bg.png') #ebebeb;
 }
 
+.app input, .modal input {height: 30px}
+
 .app-container {
 	width: 100%;
 	height: 100%;
@@ -30,6 +33,9 @@ body {
 	position: relative;
 	max-width: 990px;
 	min-height: 100%;
+	height: 100%;
+	display: table;
+	width: 100%;
 	background: url('/images/content-bg.png') #f6f6f6;
 	margin: 0 auto;
 	padding: 10px;
@@ -37,7 +43,7 @@ body {
 	box-shadow: 0px 0px 400px #0088cc;
 
 	p {padding:10px}
-
+	.layout {height: 100%}
 	.notifier {
 		position: absolute;
 		left: 230px;
@@ -46,5 +52,10 @@ body {
 		z-index: 10;
 		height: 50px;
 		overflow: hidden;
+	}
+
+	.content {
+		padding-top: 100px;
+		height: 100%;
 	}
 }

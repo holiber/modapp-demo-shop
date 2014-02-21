@@ -1,8 +1,0 @@
-[
-	{"id": 11, "name": "samsung", "price": 210},
-	{"id": 12, "name": "iphone", "price": 220},
-	{"id": 21, "name": "htc", "price": 230},
-	{"id": 22, "name": "sony", "price": 240},
-	{"id": 31, "name": "photosamsung", "price": 150},
-	{"id": 32, "name": "photopanasonic", "price": 150}
-]

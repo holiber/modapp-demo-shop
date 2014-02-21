@@ -1,3 +1,11 @@
+.header-place {
+	position: absolute;
+	height: 92px;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+}
+
 .header-module {
 
 	.navbar,.page-header {
@@ -16,6 +24,6 @@
 	.user {
 		position: absolute;
 		right: 10px;
-		top: 20px;
+		top: 10px;
 	}
 }

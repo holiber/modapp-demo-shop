@@ -3,13 +3,24 @@
 		<a href="#?" type="button" class="close" >&times;</a>
 		<h3>Registration</h3>
 	</div>
-	<div class="modal-body">
-		<input type="text" name="email" placeholder="E-mail"/><br/>
-		<input type="text" name="pass" placeholder="password"/>
-		<input type="text" name="passconfirm" placeholder="confirm password"/>
-		<a href="#?login=true">Sign in</a>
-	</div>
-	<div class="modal-footer">
-		<a href="#" class="btn to-cart btn-primary">Registration</a>
-	</div>
+
+
+		<div class="modal-body">
+			{{#eq loadState 'loading'}}
+				Please wait...
+			{{/eq}}
+			{{#eq loadState 'done'}}
+				<input type="text" name="login" placeholder="login"/><br/>
+				<input type="password" name="pass" placeholder="password"/>
+				<input type="password" name="passconfirm" placeholder="confirm password"/>
+				<input type="text" name="code" placeholder="code"/>
+				<a href="#?login=true">Sign in</a>
+			{{/eq}}
+		</div>
+
+		{{#eq loadState 'done'}}
+			<div class="modal-footer">
+				<a href="#" class="btn submit btn-primary">Registration</a>
+			</div>
+		{{/eq}}
 </div>

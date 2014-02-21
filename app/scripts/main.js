@@ -9,27 +9,34 @@ require.config({
 		// removes i18n precompiler, handlebars and json2
 		excludeAfterBuild: true
 	},
+	shim: {
+		bootstrap: {
+			deps: ['jquery'],
+			exports: 'jquery'
+		},
+		hbs: {
+			deps: ['handlebars']
+		},
+		socketio: {
+			exports: 'io'
+		},
+		qstore: {
+			exports: 'qstore'
+		}
+	},
+	paths: {
+		jquery: '../components/jquery/jquery',
+		comps: '../components',
+		handlebars : '../components/hbs/Handlebars',
+		hbs: '../components/hbs/hbs',
+		"underscore" : '../components/hbs/hbs/underscore',
+		i18nprecompile : "../components/hbs/hbs/i18nprecompile",
+		json2 : "../components/hbs/hbs/json2",
+		bootstrap: '../components/bootstrap/dist/js/bootstrap',
+		'class': '../components/modapp/class',
+		qstore: '../components/qstore/data'
+	},
 
-    paths: {
-	    jquery: '../components/jquery/jquery',
-	    comps: '../components',
-	    handlebars : '../components/hbs/Handlebars',
-	    hbs: '../components/hbs/hbs',
-	    "underscore" : '../components/hbs/hbs/underscore',
-	    i18nprecompile : "../components/hbs/hbs/i18nprecompile",
-	    json2 : "../components/hbs/hbs/json2",
-        bootstrap: '../components/bootstrap/dist/js/bootstrap',
-	    'class': '../components/modapp/class'
-    },
-    shim: {
-        bootstrap: {
-            deps: ['jquery'],
-            exports: 'jquery'
-        },
-	    hbs: {
-		    deps: ['handlebars']
-	    }
-    },
 	hbs : {
 		templateExtension : 'hbs',
 		helperDirectory: 'hbs-helpers/',
@@ -37,9 +44,14 @@ require.config({
 	}
 });
 
-require(['jquery', 'modules/app', 'bootstrap', 'class'], function ($, MyApp) {
-    'use strict';
-    // use app here
-	var myApp = window.app = new MyApp();
-	myApp.start($('.app-container'));
+require([
+	'jquery',
+	'modules/app',
+	'bootstrap',
+	'class',
+	'qstore',
+	'comps/jquery.cookie/jquery.cookie'
+], function ($, MyApp) {
+	var app = window.app = new MyApp();
+	app.start($('.app-container'));
 });
